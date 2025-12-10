@@ -1,7 +1,22 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
-$dokka.location:xyz.malefic.lib.fibonacci////PointingToDeclaration/library/xyz.malefic.lib.fibonacci/index.html
-$dokka.location:xyz.malefic.lib.fibonacci//firstElement/#/PointingToDeclaration/library/xyz.malefic.lib.fibonacci/first-element.html
-$dokka.location:xyz.malefic.lib.fibonacci//generateFibi/#/PointingToDeclaration/library/xyz.malefic.lib.fibonacci/generate-fibi.html
-$dokka.location:xyz.malefic.lib.fibonacci//secondElement/#/PointingToDeclaration/library/xyz.malefic.lib.fibonacci/second-element.html
-xyz.malefic.lib.fibonacci
+$dokka.location:xyz.malefic.emkt////PointingToDeclaration/library/xyz.malefic.emkt/index.html
+$dokka.location:xyz.malefic.emkt/Connection///PointingToDeclaration/library/xyz.malefic.emkt/-connection/index.html
+$dokka.location:xyz.malefic.emkt/Connection/Connection/#kotlinx.coroutines.Job#kotlinx.coroutines.Job/PointingToDeclaration/library/xyz.malefic.emkt/-connection/-connection.html
+$dokka.location:xyz.malefic.emkt/Connection/cancel/#/PointingToDeclaration/library/xyz.malefic.emkt/-connection/cancel.html
+$dokka.location:xyz.malefic.emkt/Connection/isActive/#/PointingToDeclaration/library/xyz.malefic.emkt/-connection/is-active.html
+$dokka.location:xyz.malefic.emkt/Signal///PointingToDeclaration/library/xyz.malefic.emkt/-signal/index.html
+$dokka.location:xyz.malefic.emkt/Signal/Signal/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal/-signal.html
+$dokka.location:xyz.malefic.emkt/Signal/connect/#kotlin.coroutines.SuspendFunction1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/library/xyz.malefic.emkt/-signal/connect.html
+$dokka.location:xyz.malefic.emkt/Signal/connect/#kotlinx.coroutines.CoroutineScope#kotlin.coroutines.SuspendFunction1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/library/xyz.malefic.emkt/-signal/connect.html
+$dokka.location:xyz.malefic.emkt/Signal/emit/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/library/xyz.malefic.emkt/-signal/emit.html
+$dokka.location:xyz.malefic.emkt/Signal/emitWithParams/#TypeParam(bounds=[kotlin.Any?])#kotlin.collections.Map[kotlin.String,kotlin.Any?]/PointingToDeclaration/library/xyz.malefic.emkt/-signal/emit-with-params.html
+$dokka.location:xyz.malefic.emkt/Signal/flow/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal/flow.html
+$dokka.location:xyz.malefic.emkt/Signal/withParams/#kotlin.Any?#kotlin.collections.Map[kotlin.String,kotlin.Any?]/PointingToDeclaration/library/xyz.malefic.emkt/-signal/with-params.html
+$dokka.location:xyz.malefic.emkt/SignalData///PointingToDeclaration/library/xyz.malefic.emkt/-signal-data/index.html
+$dokka.location:xyz.malefic.emkt/SignalData/SignalData/#TypeParam(bounds=[kotlin.Any?])#kotlin.collections.Map[kotlin.String,kotlin.Any?]/PointingToDeclaration/library/xyz.malefic.emkt/-signal-data/-signal-data.html
+$dokka.location:xyz.malefic.emkt/SignalData/getParam/#kotlin.String/PointingToDeclaration/library/xyz.malefic.emkt/-signal-data/get-param.html
+$dokka.location:xyz.malefic.emkt/SignalData/hasParam/#kotlin.String/PointingToDeclaration/library/xyz.malefic.emkt/-signal-data/has-param.html
+$dokka.location:xyz.malefic.emkt/SignalData/params/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal-data/params.html
+$dokka.location:xyz.malefic.emkt/SignalData/value/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal-data/value.html
+xyz.malefic.emkt
