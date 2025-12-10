@@ -6,10 +6,12 @@ android-compileSdk = "36"
 kotlinter = "5.3.0"
 kermit = "2.0.8"
 dokka = "2.1.0"
+coroutines = "1.10.2"
 
 [libraries]
 kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
 kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }

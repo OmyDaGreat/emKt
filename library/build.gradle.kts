@@ -68,6 +68,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(libs.kermit)
+                implementation(libs.kotlinx.coroutines.core)
             }
         }
         val commonTest by getting {
