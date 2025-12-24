@@ -40,7 +40,7 @@ open class SignalBus {
      */
     inline fun <reified T : Signal> on(noinline handler: (T) -> Unit): Connection {
         val key = T::class
-        handlers.getOrPut(key) { mutableListOf() }.add(handler as (Any) -> Unit)
+        handlers.getOrPut(key) { mutableListOf() }.add { signal -> handler(signal as T) }
         return {
             handlers[key]?.remove(handler)
         }
