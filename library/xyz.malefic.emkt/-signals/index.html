@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>Connection</title>
+    <title>Signals</title>
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
         <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js", "js");</script>
@@ -104,28 +104,62 @@
         </nav>
         <div id="resizer" class="resizer" data-item-type="BAR"></div>
         <div id="main" data-item-type="SECTION" role="main">
-<div class="main-content" data-page-type="classlike" id="content" pageIds="library::xyz.malefic.emkt/Connection///PointingToDeclaration//-654899660">
-  <div class="breadcrumbs"><a href="../../../index.html">library</a><span class="delimiter">/</span><a href="../index.html">xyz.malefic.emkt</a><span class="delimiter">/</span><span class="current">Connection</span></div>
+<div class="main-content" data-page-type="classlike" id="content" pageIds="library::xyz.malefic.emkt/Signals///PointingToDeclaration//-654899660">
+  <div class="breadcrumbs"><a href="../../../index.html">library</a><span class="delimiter">/</span><a href="../index.html">xyz.malefic.emkt</a><span class="delimiter">/</span><span class="current">Signals</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>Connection</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="index.html">Connection</a></div><p class="paragraph">Represents a connection to an event handler registered with <a href="../-signal-bus/index.html">SignalBus</a>.</p><p class="paragraph">Use the returned <a href="index.html">Connection</a> to disconnect the handler and prevent further invocations. Implementations are expected to remove internal references to the handler to avoid memory leaks.</p></div></div>
+    <h1 class="cover"><span><span>Signals</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Signals</a> : <a href="../-signal-bus/index.html">SignalBus</a></div><p class="paragraph">Global, shared instance of <a href="../-signal-bus/index.html">SignalBus</a> for convenient access.</p><p class="paragraph">This is provided as a convenience for application-wide signals. For isolated subsystems or tests, prefer creating a dedicated <a href="../-signal-bus/index.html">SignalBus</a> instance instead of using this global.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <div data-togglable="FUNCTION">
-        <h2 class="tableheader">Functions</h2>
-        <div class="table"><a data-name="670185310%2FFunctions%2F-654899660" anchor-label="disconnect" id="670185310%2FFunctions%2F-654899660" data-filterable-set=":library/commonMain"></a>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1874876207%2FProperties%2F-654899660" anchor-label="handlers" id="1874876207%2FProperties%2F-654899660" data-filterable-set=":library/commonMain"></a>
           <div class="table-row table-row_content" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="disconnect.html"><span><span>disconnect</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="670185310%2FFunctions%2F-654899660"></span>
+                  <div><a href="../-signal-bus/handlers.html"><span><span>handlers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1874876207%2FProperties%2F-654899660"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="disconnect.html"><span class="token function">disconnect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disconnects the associated event handler so it will no longer be invoked.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-signal-bus/handlers.html">handlers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Map that associates an event type (<a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-class/index.html">KClass</a>) with a list of handler functions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1032656284%2FFunctions%2F-654899660" anchor-label="emit" id="-1032656284%2FFunctions%2F-654899660" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-signal-bus/emit.html"><span><span>emit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1032656284%2FFunctions%2F-654899660"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-signal-bus/emit.html">T</a><span class="token operator"> : </span><a href="../-signal/index.html">Signal</a><span class="token operator">&gt; </span><a href="../-signal-bus/emit.html"><span class="token function">emit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">signal<span class="token operator">: </span><a href="../-signal-bus/emit.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Emit a signal to all handlers registered for the signal's concrete type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-765030885%2FFunctions%2F-654899660" anchor-label="on" id="-765030885%2FFunctions%2F-654899660" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-signal-bus/on.html"><span><span>on</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-765030885%2FFunctions%2F-654899660"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-signal-bus/on.html">T</a><span class="token operator"> : </span><a href="../-signal/index.html">Signal</a><span class="token operator">&gt; </span><a href="../-signal-bus/on.html"><span class="token function">on</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">noinline </span>handler<span class="token operator">: </span><span class="token punctuation">(</span><a href="../-signal-bus/on.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-connection/index.html">Connection</a></div><div class="brief "><p class="paragraph">Register a handler for signals of type <a href="../-signal-bus/on.html">T</a>.</p></div></div></div>
                 </div>
               </div>
             </div>

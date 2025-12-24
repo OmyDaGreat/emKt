@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>cancel</title>
+    <title>handlers</title>
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
         <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js", "js");</script>
@@ -104,12 +104,12 @@
         </nav>
         <div id="resizer" class="resizer" data-item-type="BAR"></div>
         <div id="main" data-item-type="SECTION" role="main">
-<div class="main-content" data-page-type="member" id="content" pageIds="library::xyz.malefic.emkt/Connection/cancel/#/PointingToDeclaration//-654899660">
-  <div class="breadcrumbs"><a href="../../../index.html">library</a><span class="delimiter">/</span><a href="../index.html">xyz.malefic.emkt</a><span class="delimiter">/</span><a href="index.html">Connection</a><span class="delimiter">/</span><span class="current">cancel</span></div>
+<div class="main-content" data-page-type="member" id="content" pageIds="library::xyz.malefic.emkt/SignalBus/handlers/#/PointingToDeclaration//-654899660">
+  <div class="breadcrumbs"><a href="../../../index.html">library</a><span class="delimiter">/</span><a href="../index.html">xyz.malefic.emkt</a><span class="delimiter">/</span><a href="index.html">SignalBus</a><span class="delimiter">/</span><span class="current">handlers</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>cancel</span></span></h1>
+    <h1 class="cover"><span><span>handlers</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><p class="paragraph">Cancels this connection, preventing any further actions from being executed.</p></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="handlers.html">handlers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><p class="paragraph">Map that associates an event type (<a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-class/index.html">KClass</a>) with a list of handler functions.</p><p class="paragraph">Each handler is stored as a function accepting <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a> to avoid repeated casts when dispatching. Handlers should accept the specific <a href="../-signal/index.html">Signal</a> subtype when registered via <a href="on.html">on</a>.</p></div></div>
 </div>
     <div class="footer">
         <div class="footer--container">

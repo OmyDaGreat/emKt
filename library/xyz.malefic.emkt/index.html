@@ -124,7 +124,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-connection/index.html">Connection</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collectionJob<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span><span class="token punctuation">, </span></span><span class="parameter ">parentJob<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Represents a connection to a signal that can be cancelled.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-connection/index.html">Connection</a></div><div class="brief "><p class="paragraph">Represents a connection to an event handler registered with <a href="-signal-bus/index.html">SignalBus</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -139,22 +139,37 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-signal/index.html">Signal</a><span class="token operator">&lt;</span><a href="-signal/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A class representing a signal that can emit values of type T and allows other components to connect and react to these emitted values.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-signal/index.html">Signal</a></div><div class="brief "><p class="paragraph">Base type for all signals that can be emitted on a <a href="-signal-bus/index.html">SignalBus</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1861267793%2FClasslikes%2F-654899660" anchor-label="SignalData" id="1861267793%2FClasslikes%2F-654899660" data-filterable-set=":library/commonMain"></a>
+<a data-name="-1683433753%2FClasslikes%2F-654899660" anchor-label="SignalBus" id="-1683433753%2FClasslikes%2F-654899660" data-filterable-set=":library/commonMain"></a>
           <div class="table-row table-row_content" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="-signal-data/index.html"><span>Signal</span><wbr></wbr><span><span>Data</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1861267793%2FClasslikes%2F-654899660"></span>
+                  <div><a href="-signal-bus/index.html"><span>Signal</span><wbr></wbr><span><span>Bus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1683433753%2FClasslikes%2F-654899660"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-signal-data/index.html">SignalData</a><span class="token operator">&lt;</span><a href="-signal-data/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>value<span class="token operator">: </span><a href="-signal-data/index.html">T</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>params<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A data class that wraps a value with associated parameters. Used for emitting signals with additional metadata or context.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-signal-bus/index.html">SignalBus</a></div><div class="brief "><p class="paragraph">Lightweight event bus for registering handlers and emitting signals.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-143649356%2FClasslikes%2F-654899660" anchor-label="Signals" id="-143649356%2FClasslikes%2F-654899660" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-signals/index.html"><span><span>Signals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-143649356%2FClasslikes%2F-654899660"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-signals/index.html">Signals</a> : <a href="-signal-bus/index.html">SignalBus</a></div><div class="brief "><p class="paragraph">Global, shared instance of <a href="-signal-bus/index.html">SignalBus</a> for convenient access.</p></div></div></div>
                 </div>
               </div>
             </div>
