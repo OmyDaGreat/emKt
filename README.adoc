@@ -10,22 +10,21 @@ JS, WASM, Native).
 
 == Overview
 
-emKt offers a minimal, coroutine-friendly signaling utility inspired by Godot's
-signals. It is implemented with Kotlin's Flow APIs and is designed for simple
-pub/sub messaging inside multiplatform libraries and applications.
+emKt offers a minimal signaling utility inspired by Godot's signals. It is
+implemented with a small, platform-agnostic API that makes it easy to emit
+values and connect synchronous handlers.
 
 Key concepts:
 
-* Signal<T> — a hot event source that emits values of type `T`.
-* SignalData<T> — a wrapper that carries a value plus optional named parameters.
-* Connection — a small handle that can cancel a connection created by
+* Signal<T> — a simple event source that emits values of type `T`.
+* Connection — a small handle that can disconnect a handler created by
   `Signal.connect()`.
+* Signals — a global registry to register and retrieve named signals.
 
 == Features
 
 * Kotlin Multiplatform — use the library on JVM, Android, JavaScript, WASM and
   Native targets.
-* Coroutine friendly — built on kotlinx.coroutines and Flow.
 * Small API surface — easy to read and integrate.
 
 == Quick start
@@ -53,64 +52,52 @@ implementation("xyz.malefic:emkt:<version>")
 
 == API examples
 
-Below are common usage patterns. Import the package by adding the following import in your Kotlin files: `import xyz.malefic.emkt.*`
+Below are common usage patterns. Import the package by adding the following
+import in your Kotlin files: `import xyz.malefic.emkt.*`
 
 === Basic Signal usage
 
 [source,kotlin]
 ----
-val signal = Signal<String>()
+// Create or retrieve a named Signal (type parameter defines the payload type)
+val signal = Signals.register<String>("mySignal")
 
-// Using an external CoroutineScope
-val scope = MainScope()
-scope.launch {
-  signal.flow.collect { value ->
-    println("Received: $value")
-  }
+// Connect a synchronous handler. Returns a Connection which can be disconnected
+val conn = signal.connect { value ->
+  println("Received: $value")
 }
 
-// Emitting
-suspend fun send() {
-  signal.emit("hello")
-}
+// Emit values synchronously to all connected handlers
+signal.emit("hello")
+
+// Later, disconnect the handler
+conn.disconnect()
 ----
 
-=== Using connect() which returns a Connection
+=== Multiple handlers and clearing signals
 
 [source,kotlin]
 ----
-val connection = signal.connect { value ->
-  println("Connected handler: $value")
-}
+val s = Signals.register<Int>("counter")
+val a = s.connect { v -> println("A: $v") }
+val b = s.connect { v -> println("B: $v") }
 
-// Later, cancel the connection
-connection.cancel()
-----
+s.emit(1)
 
-=== Emitting values with parameters
+// Disconnect individual connections
+a.disconnect()
 
-[source,kotlin]
-----
-// Create a SignalData with named params
-val data = signal.withParams("click", mapOf("x" to 10, "y" to 20))
-
-// Emit the SignalData directly, or use emitWithParams to merge params
-suspend fun emitWithExtra() {
-  signal.emitWithParams("click", mapOf("button" to "left"))
-}
-
-// In a collector you can safely cast to SignalData when applicable
+// Clear all registered signals
+Signals.clear()
 ----
 
 == Design notes
 
-* Signals are backed by MutableSharedFlow so multiple collectors can receive
-  the same emissions.
-* `emitWithParams` will wrap values into `SignalData` and merge params when
-  appropriate.
-* `connect()` without a scope creates an internal SupervisorJob and
-  CoroutineScope; it returns a `Connection` that cancels both the collection
-  job and the parent job.
+* The implementation is intentionally small: signals maintain a list of handlers
+  and call them synchronously on `emit()`.
+* `Signals` provides a simple global registry useful for application-level
+  event routing. Call `Signals.clear()` in tests or when you want to drop all
+  registrations.
 
 == Building & testing
 
