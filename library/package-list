@@ -7,8 +7,11 @@ $dokka.location:xyz.malefic.emkt/Signal///PointingToDeclaration/library/xyz.mal
 $dokka.location:xyz.malefic.emkt/Signal/Signal/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal/-signal.html
 $dokka.location:xyz.malefic.emkt/SignalBus///PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/index.html
 $dokka.location:xyz.malefic.emkt/SignalBus/SignalBus/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/-signal-bus.html
+$dokka.location:xyz.malefic.emkt/SignalBus/asyncHandlers/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/async-handlers.html
+$dokka.location:xyz.malefic.emkt/SignalBus/emit/#TypeParam(bounds=[xyz.malefic.emkt.Signal])#kotlinx.coroutines.CoroutineScope/PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/emit.html
 $dokka.location:xyz.malefic.emkt/SignalBus/emit/#TypeParam(bounds=[xyz.malefic.emkt.Signal])/PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/emit.html
 $dokka.location:xyz.malefic.emkt/SignalBus/handlers/#/PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/handlers.html
 $dokka.location:xyz.malefic.emkt/SignalBus/on/#kotlin.Function1[TypeParam(bounds=[xyz.malefic.emkt.Signal]),kotlin.Unit]/PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/on.html
+$dokka.location:xyz.malefic.emkt/SignalBus/on/#kotlin.coroutines.SuspendFunction1[TypeParam(bounds=[xyz.malefic.emkt.Signal]),kotlin.Unit]/PointingToDeclaration/library/xyz.malefic.emkt/-signal-bus/on.html
 $dokka.location:xyz.malefic.emkt/Signals///PointingToDeclaration/library/xyz.malefic.emkt/-signals/index.html
 xyz.malefic.emkt
