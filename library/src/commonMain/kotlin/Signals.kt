@@ -35,7 +35,7 @@ open class SignalBus {
      *
      * Each handler is stored as a suspend function accepting [Any] to avoid repeated casts
      * when dispatching. Handlers should accept the specific [Signal] subtype when
-     * registered via the suspending [on].
+     * registered via [onAsync].
      */
     val asyncHandlers = mutableMapOf<KClass<*>, MutableList<suspend (Any) -> Unit>>()
 
@@ -62,14 +62,14 @@ open class SignalBus {
      * Register an async handler for signals of type [T].
      *
      * The suspend handler will be invoked with instances of [T] when such a signal is
-     * emitted via the suspending [emit]. The returned [Connection] can be used to disconnect the
+     * emitted via [emitAsync]. The returned [Connection] can be used to disconnect the
      * handler and prevent further invocations.
      *
      * @param T The concrete [Signal] subtype to listen for.
      * @param handler Suspend lambda invoked when a [T] signal is emitted asynchronously.
      * @return A [Connection] that disconnects the registered handler when closed.
      */
-    inline fun <reified T : Signal> on(noinline handler: suspend (T) -> Unit): Connection {
+    inline fun <reified T : Signal> onAsync(noinline handler: suspend (T) -> Unit): Connection {
         val key = T::class
         asyncHandlers.getOrPut(key) { mutableListOf() }.add { signal -> handler(signal as T) }
         return {
@@ -103,7 +103,7 @@ open class SignalBus {
      * @param scope The [CoroutineScope] in which to launch the async handlers. Defaults to a scope
      *              using [Dispatchers.Default].
      */
-    fun <T : Signal> emit(
+    fun <T : Signal> emitAsync(
         signal: T,
         scope: CoroutineScope = CoroutineScope(Dispatchers.Default),
     ) {
