@@ -6,7 +6,7 @@ android-compileSdk = "36"
 kotlinter = "5.5.0"
 kermit = "2.1.0"
 dokka = "2.1.0"
-coroutines = "1.10.2"
+coroutines = "1.11.0"
 
 [libraries]
 kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
